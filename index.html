@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    body {
+      margin: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .outer-container {
+      height: 748px;
+      width: 748px;
+      display: grid;
+      background-color: #000;
+      grid-template: 414px 296px 20px /  320px 361px;
+      gap: 9px;
+    }
+
+    .red {
+      background-color: #E72F24;
+    }
+    
+    .blue {
+      background-color: #004592;
+    }
+
+    .yellow {
+      background-color:  #F9D01E;
+    }
+
+    .black {
+      background-color: #232629;
+    }
+
+    .r1-grey {
+      background-color: #F0F1EC;
+      width: 419px;
+    }
+
+    .r2-nested-grid {
+      display: grid;
+      grid-template: 295px / 360px 50px;
+      gap: 9px;
+      background-color: #F0F1EC;
+    }
+
+    /* .nested-grid > .blue {
+      height: 325px;
+    } */
+
+    .blue {
+      height: 130px;
+      border-bottom: 10px solid black;
+    }
+
+    .r2-grey{
+      height: 185px;
+      background-color: #F0F1EC;
+    }
+
+    .flex-container {
+      display: flex;
+      gap: 9px;
+    }
+
+    .flex-container > .yellow {
+      width: 198px;
+    }
+
+    .flex-container > .black {
+      width: 153px;
+    }
+    
+    .grey {
+      background-color: #F0F1EC;
+    }
+
+    
+    
+  </style>
+</head>
+
+<body>
+
+   <div class="outer-container">
+    <!-- Row 1 -->
+    <div class="red"></div>
+
+    <!-- Assigning grey color to first row -->
+    <div class="r1-grey"></div>
+
+    <!-- Row 2 -->
+    <!-- First Inner Container  -->
+    <div class="grey"></div>
+    <div class="r2-nested-grid">
+      <div class="grey"></div>
+     
+      <!-- <div class="grey"></div> -->
+
+    <!-- subDivs to make R2 Column-3  -->
+      <div >
+        <div class="blue"></div>
+        <div class="r2-grey"></div>
+      </div>  
+       
+    </div>
+    
+
+    <!-- Row 3 -->
+    <div class="grey"></div>
+    <!-- Column 2 settings -->
+    <div class="flex-container">
+      <div class="yellow"></div>
+      <div class="black"></div>
+    </div>
+      
+ 
+  </div>
+  
+ 
+</body>
+
+</html>
